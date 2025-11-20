@@ -1,0 +1,2 @@
+# Curso de HTML e CSS
+Este repositório conterá exemplos de códigos em HTML e CSS. A principal referência usada foi o [Curso de HTML5 e CSS3 do Curso em Vídeo](https://www.cursoemvideo.com/curso/html5-css3-modulo1/).
