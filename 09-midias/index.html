@@ -14,17 +14,24 @@
     <h2>Imagens dinâmicas</h2>
     <p>Diminua o tamanho do seu navegador.</p>
     <picture>
-        <source media="(max-width: 750px)" srcset="images/foto-p.png" type="image/png">
-        <source media="(max-width: 1050px)" srcset="images/foto-m.png" type="image/png">
-        <img src="images/foto-g.png" alt="Foto grande">
+        <source media="(max-width: 750px)" srcset="medias/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="medias/foto-m.png" type="image/png">
+        <img src="medias/foto-g.png" alt="Foto grande">
     </picture>
 
     <h2>Áudio</h2>
     <p>Reproduzindo áudio no HTML5.</p>
     <audio controls preload="metadata">
-        <source src="sounds/happy-mistake.mp3" type="audio/mpeg">
-        <p>Infelizmente seu navegador não reproduz MP3.</p>
+        <source src="medias/happy-mistake.mp3" type="audio/mpeg">
+        <p>Infelizmente seu navegador não reproduz áudios.</p>
     </audio>
+
+    <h2>Vídeos</h2>
+    <p>Este vídeo está no meu servidor.</p>
+    <video controls preload="metadata" width="500px">
+        <source src="medias/video_exemplo.mp4" type="video/mp4">
+        <p>Infelizmente seu navegador não reproduz vídeos.</p>
+    </video>
 </body>
 
 </html>
