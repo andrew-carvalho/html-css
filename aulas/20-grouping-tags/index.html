@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../04-favicon/favicon.ico" type="image/x-icon">
+    <title>Agrupamento de caixas</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav>ul>li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        header {
+            padding: 10px;
+            background-color: lightblue;
+        }
+
+        main {
+            display: block;
+            margin: auto;
+            width: 800px;
+            padding: 10px;
+
+
+            background-color: aliceblue;
+        }
+
+        section {
+            margin: 10px 0 10px 0;
+        }
+
+        aside {
+            background-color: lightgray;
+            padding: 10px;
+            margin: 10px 0 10px 0;
+        }
+
+        footer {
+            padding: 10px;
+
+            background-color: black;
+            color: white;
+
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cabeçalho</h1>
+
+        <nav>
+            <p>Menu de navegação</p>
+            <ul>
+                <li><a href="#assuntos">Assuntos</a></li>
+                <li><a href="#artigo-1">Artigo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Conteúdo</h1>
+
+        <section id="assuntos">
+            <h2>Assuntos</h1>
+                <article id="artigo-1">
+                    <h3>Artigo</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius eos beatae ipsa deleniti non
+                        deserunt?
+                        Cum, reprehenderit! Rerum, consectetur porro optio ut, laudantium aut quia, ullam alias
+                        perferendis
+                        est commodi.</p>
+
+                    <aside>
+                        <h4>Conteúdo lateral</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum reprehenderit
+                            eaque obcaecati deleniti nam autem sequi pariatur hic, ducimus assumenda possimus
+                            nisi. Illo beatae odit natus iste numquam blanditiis a!</p>
+                    </aside>
+                </article>
+        </section>
+    </main>
+
+    <footer>
+
+        <h1>Rodapé</h1>
+    </footer>
+</body>
+
+</html>
