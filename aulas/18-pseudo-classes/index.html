@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../04-favicon/favicon.ico" type="image/x-icon">
-    <title>Pseudi-classes</title>
+    <title>Pseudo-classes</title>
     <style>
         div {
             display: inline-block;
@@ -28,16 +28,37 @@
         #d1:hover>p {
             display: inline;
         }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        a::after {
+            content: ' [link]';
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
+    <h1>Pseudo-classes</h1>
     <div id="d1">
         01
         <p>Texto escondido</p>
     </div>
     <div id="d2">02</div>
     <div id="d3">03</div>
+
+    <h2>Pseudo-elementos</h2>
+    <ul>
+        <li><a href="https://www.google.com" target="_blank">Site 1</a></li>
+        <li><a href="https://www.youtube.com" target="_blank">Site 2</a></li>
+        <li><a href="https://www.google.com" target="_blank">Site 3</a></li>
+    </ul>
 </body>
 
 </html>
