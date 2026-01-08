@@ -22,11 +22,14 @@
 
         input {
             padding: 8px;
+            width: 200px;
         }
 
         input[type="submit"],
         input[type="reset"] {
+            width: 100px;
             margin-top: 20px;
+            margin-right: 15px;
             cursor: pointer;
         }
     </style>
@@ -37,12 +40,18 @@
     <form autocomplete="on" action="#" method="post">
         <div class="input">
             <label for="name" class="required">Nome</label>
-            <input type="text" name="name" id="name" placeholder="Nome" required>
+            <input type="text" name="name" id="name" placeholder="Nome" autocomplete="name" required>
         </div>
 
         <div class="input">
             <label for="surename">Sobrenome</label>
-            <input type="text" name="surename" id="surename" placeholder="Sobrenome">
+            <input type="text" name="surename" id="surename" placeholder="Sobrenome" autocomplete="family-name">
+        </div>
+
+        <div class="input">
+            <label for="date-of-birth">Data de nascimento</label>
+            <input type="date" name="date-of-birth" id="date-of-birth" placeholder="Data de nascimento"
+                autocomplete="bday-day">
         </div>
 
         <div class="input">
@@ -54,6 +63,21 @@
             <label for="password" class="required">Senha</label>
             <input type="password" name="password" id="password" placeholder="Senha" autocomplete="current-password"
                 minlength="8" maxlength="20" required>
+        </div>
+
+        <div class="input">
+            <label for="salary">Salário atual</label>
+            <input type="number" name="salary" id="salary" placeholder="Salário" min="0" value="0" step="500">
+        </div>
+
+        <div class="input">
+            <label for="month">Mês de Início</label>
+            <input type="month" name="month" id="month" placeholder="Mês de Início">
+        </div>
+
+        <div class="input">
+            <label for="time">Horário de início de expediente</label>
+            <input type="time" name="time" id="time" placeholder="Horário de início de expediente" value="09:00">
         </div>
 
         <div class="input">
