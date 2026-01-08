@@ -7,6 +7,11 @@
     <link rel="shortcut icon" href="../04-favicon/favicon.ico" type="image/x-icon">
     <title>Formulários</title>
     <style>
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
         input[type="submit"] {
             cursor: pointer;
         }
@@ -15,9 +20,13 @@
 
 <body>
     <h1>Meu primeiro formuário</h1>
-    <form>
-        <p>Nome: <input type="text" name="name" id="name"></p>
-        <p>Sobrenome: <input type="text" name="surename" id="surename"></p>
+    <form autocomplete="on" action="#">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name">
+
+        <label for="surename">Sobrenome</label>
+        <input type="text" name="surename" id="surename">
+
         <input type="submit" value="Enviar">
     </form>
 </body>
