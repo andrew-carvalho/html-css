@@ -56,12 +56,18 @@
             width: 100%;
         }
 
-        input[type="checkbox"] {
-            padding: 0px;
-            width: auto;
+        input[type="color"] {
+            width: 80px;
+            height: 30px;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        input[type="file"] {
             cursor: pointer;
         }
 
+        input[type="checkbox"],
         input[type="radio"] {
             padding: 0px;
             width: auto;
@@ -96,6 +102,14 @@
                     <input type="radio" name="sex" id="sex-m" value="M">
                     <label for="sex-f" class="label-radio">Feminino</label>
                     <input type="radio" name="sex" id="sex-f" value="F">
+                </div>
+                <div class="input">
+                    <label for="color">Cor favorita</label>
+                    <input type="color" name="color" id="color" placeholder="Cor favorita">
+                </div>
+                <div class="input">
+                    <label for="file">Foto de perfil</label>
+                    <input type="file" name="file" id="file" placeholder="Foto de perfil">
                 </div>
                 <div class="input">
                     <label for="date-of-birth">Data de nascimento</label>
@@ -135,6 +149,11 @@
                     <label for="time">Horário de início de expediente</label>
                     <input type="time" name="time" id="time" placeholder="Horário de início de expediente"
                         value="09:00">
+                </div>
+                <div class="input">
+                    <label for="range">Pretensão salarial</label>
+                    <input type="range" name="range" id="range" placeholder="Pretensão salarial" min="5000" max="15000"
+                        step="500">
                 </div>
             </fieldset>
 
