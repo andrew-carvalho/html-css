@@ -56,6 +56,12 @@
             width: 100%;
         }
 
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+        }
+
         input[type="color"] {
             width: 80px;
             height: 30px;
@@ -92,10 +98,26 @@
                     <label for="name" class="required">Nome</label>
                     <input type="text" name="name" id="name" placeholder="Nome" autocomplete="name" required>
                 </div>
+
                 <div class="input">
                     <label for="surename">Sobrenome</label>
                     <input type="text" name="surename" id="surename" placeholder="Sobrenome" autocomplete="family-name">
                 </div>
+
+                <div class="input">
+                    <label for="state">Estado</label>
+                    <input type="text" name="state" id="state" placeholder="Estado" list="state-list" maxlength="2">
+                    <datalist id="state-list">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </datalist>
+                </div>
+
+                <div class="input">
+                    <label for="description">Fale mais sobre você</label>
+                    <textarea name="description" id="description"></textarea>
+                </div>
+
                 <div class="input">
                     <p>Sexo</p>
                     <label for="sex-m" class="label-radio">Masculino</label>
@@ -103,27 +125,33 @@
                     <label for="sex-f" class="label-radio">Feminino</label>
                     <input type="radio" name="sex" id="sex-f" value="F">
                 </div>
+
                 <div class="input">
                     <label for="color">Cor favorita</label>
                     <input type="color" name="color" id="color" placeholder="Cor favorita">
                 </div>
+
                 <div class="input">
                     <label for="file">Foto de perfil</label>
                     <input type="file" name="file" id="file" placeholder="Foto de perfil">
                 </div>
+
                 <div class="input">
                     <label for="date-of-birth">Data de nascimento</label>
                     <input type="date" name="date-of-birth" id="date-of-birth" placeholder="Data de nascimento"
                         autocomplete="bday-day">
                 </div>
+
                 <div class="input">
                     <label for="telephone">Telefone</label>
                     <input type="tel" name="telephone" id="telephone" placeholder="Telefone" autocomplete="tel">
                 </div>
+
                 <div class="input">
                     <label for="email" class="required">E-mail</label>
                     <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="email" required>
                 </div>
+
                 <div class="input">
                     <label for="password" class="required">Senha</label>
                     <input type="password" name="password" id="password" placeholder="Senha"
@@ -133,23 +161,38 @@
 
             <fieldset>
                 <legend>Dados profissionais</legend>
+
                 <div class="input">
                     <label for="employed" class="label-checkbox">Empregado atualmente?</label>
                     <input type="checkbox" name="employed" id="employed" placeholder="Empregado atualmente?">
                 </div>
+
+                <div class="input">
+                    <label for="select">Área de atuação</label>
+                    <select name="select" id="select">
+                        <optgroup label="Desenvolvimento">
+                            <option value="programming">Programação</option>
+                            <option value="design">Design</option>
+                        </optgroup>
+                    </select>
+                </div>
+
                 <div class="input">
                     <label for="salary">Salário atual</label>
                     <input type="number" name="salary" id="salary" placeholder="Salário" min="0" value="0" step="500">
                 </div>
+
                 <div class="input">
                     <label for="month">Mês de Início</label>
                     <input type="month" name="month" id="month" placeholder="Mês de Início">
                 </div>
+
                 <div class="input">
                     <label for="time">Horário de início de expediente</label>
                     <input type="time" name="time" id="time" placeholder="Horário de início de expediente"
                         value="09:00">
                 </div>
+
                 <div class="input">
                     <label for="range">Pretensão salarial</label>
                     <input type="range" name="range" id="range" placeholder="Pretensão salarial" min="5000" max="15000"
