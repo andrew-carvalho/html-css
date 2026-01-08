@@ -7,12 +7,26 @@
     <link rel="shortcut icon" href="../04-favicon/favicon.ico" type="image/x-icon">
     <title>Formulários</title>
     <style>
-        input {
-            display: block;
+        div.input {
             margin-bottom: 10px;
         }
 
-        input[type="submit"] {
+        label {
+            display: block;
+        }
+
+        label.required::after {
+            content: " *";
+            color: darkred;
+        }
+
+        input {
+            padding: 8px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            margin-top: 20px;
             cursor: pointer;
         }
     </style>
@@ -21,13 +35,31 @@
 <body>
     <h1>Meu primeiro formuário</h1>
     <form autocomplete="on" action="#" method="post">
-        <label for="name">Nome</label>
-        <input type="text" name="name" id="name">
+        <div class="input">
+            <label for="name" class="required">Nome</label>
+            <input type="text" name="name" id="name" placeholder="Nome" required>
+        </div>
 
-        <label for="surename">Sobrenome</label>
-        <input type="text" name="surename" id="surename">
+        <div class="input">
+            <label for="surename">Sobrenome</label>
+            <input type="text" name="surename" id="surename" placeholder="Sobrenome">
+        </div>
 
-        <input type="submit" value="Enviar">
+        <div class="input">
+            <label for="email" class="required">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="email" required>
+        </div>
+
+        <div class="input">
+            <label for="password" class="required">Senha</label>
+            <input type="password" name="password" id="password" placeholder="Senha" autocomplete="current-password"
+                minlength="8" maxlength="20" required>
+        </div>
+
+        <div class="input">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
     </form>
 </body>
 
