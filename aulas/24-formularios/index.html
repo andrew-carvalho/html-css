@@ -7,6 +7,27 @@
     <link rel="shortcut icon" href="../04-favicon/favicon.ico" type="image/x-icon">
     <title>Formulários</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 100%;
+            padding: 20px;
+        }
+
+        main>h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 60%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
         fieldset {
             margin-bottom: 10px;
             padding: 10px;
@@ -20,6 +41,11 @@
             display: block;
         }
 
+        label.label-checkbox,
+        label.label-radio {
+            display: inline-block;
+        }
+
         label.required::after {
             content: " *";
             color: darkred;
@@ -27,73 +53,97 @@
 
         input {
             padding: 8px;
-            width: 200px;
+            width: 100%;
+        }
+
+        input[type="checkbox"] {
+            padding: 0px;
+            width: auto;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            padding: 0px;
+            width: auto;
+            cursor: pointer;
         }
 
         input[type="submit"],
         input[type="reset"] {
-            width: 100px;
             margin-top: 20px;
-            margin-right: 15px;
             cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <h1>Meu primeiro formuário</h1>
-    <form autocomplete="on" action="#" method="post">
-        <fieldset>
-            <legend>Dados pessoais</legend>
-            <div class="input">
-                <label for="name" class="required">Nome</label>
-                <input type="text" name="name" id="name" placeholder="Nome" autocomplete="name" required>
-            </div>
-            <div class="input">
-                <label for="surename">Sobrenome</label>
-                <input type="text" name="surename" id="surename" placeholder="Sobrenome" autocomplete="family-name">
-            </div>
-            <div class="input">
-                <label for="date-of-birth">Data de nascimento</label>
-                <input type="date" name="date-of-birth" id="date-of-birth" placeholder="Data de nascimento"
-                    autocomplete="bday-day">
-            </div>
-            <div class="input">
-                <label for="telephone">Telefone</label>
-                <input type="tel" name="telephone" id="telephone" placeholder="Telefone" autocomplete="tel">
-            </div>
-            <div class="input">
-                <label for="email" class="required">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="email" required>
-            </div>
-            <div class="input">
-                <label for="password" class="required">Senha</label>
-                <input type="password" name="password" id="password" placeholder="Senha" autocomplete="current-password"
-                    minlength="8" maxlength="20" required>
-            </div>
-        </fieldset>
+    <main>
+        <h1>Meu primeiro formuário</h1>
+        <form autocomplete="on" action="#" method="post">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <div class="input">
+                    <label for="name" class="required">Nome</label>
+                    <input type="text" name="name" id="name" placeholder="Nome" autocomplete="name" required>
+                </div>
+                <div class="input">
+                    <label for="surename">Sobrenome</label>
+                    <input type="text" name="surename" id="surename" placeholder="Sobrenome" autocomplete="family-name">
+                </div>
+                <div class="input">
+                    <p>Sexo</p>
+                    <label for="sex-m" class="label-radio">Masculino</label>
+                    <input type="radio" name="sex" id="sex-m" value="M">
+                    <label for="sex-f" class="label-radio">Feminino</label>
+                    <input type="radio" name="sex" id="sex-f" value="F">
+                </div>
+                <div class="input">
+                    <label for="date-of-birth">Data de nascimento</label>
+                    <input type="date" name="date-of-birth" id="date-of-birth" placeholder="Data de nascimento"
+                        autocomplete="bday-day">
+                </div>
+                <div class="input">
+                    <label for="telephone">Telefone</label>
+                    <input type="tel" name="telephone" id="telephone" placeholder="Telefone" autocomplete="tel">
+                </div>
+                <div class="input">
+                    <label for="email" class="required">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="email" required>
+                </div>
+                <div class="input">
+                    <label for="password" class="required">Senha</label>
+                    <input type="password" name="password" id="password" placeholder="Senha"
+                        autocomplete="current-password" minlength="8" maxlength="20" required>
+                </div>
+            </fieldset>
 
-        <fieldset>
-            <legend>Dados profissionais</legend>
-            <div class="input">
-                <label for="salary">Salário atual</label>
-                <input type="number" name="salary" id="salary" placeholder="Salário" min="0" value="0" step="500">
-            </div>
-            <div class="input">
-                <label for="month">Mês de Início</label>
-                <input type="month" name="month" id="month" placeholder="Mês de Início">
-            </div>
-            <div class="input">
-                <label for="time">Horário de início de expediente</label>
-                <input type="time" name="time" id="time" placeholder="Horário de início de expediente" value="09:00">
-            </div>
-        </fieldset>
+            <fieldset>
+                <legend>Dados profissionais</legend>
+                <div class="input">
+                    <label for="employed" class="label-checkbox">Empregado atualmente?</label>
+                    <input type="checkbox" name="employed" id="employed" placeholder="Empregado atualmente?">
+                </div>
+                <div class="input">
+                    <label for="salary">Salário atual</label>
+                    <input type="number" name="salary" id="salary" placeholder="Salário" min="0" value="0" step="500">
+                </div>
+                <div class="input">
+                    <label for="month">Mês de Início</label>
+                    <input type="month" name="month" id="month" placeholder="Mês de Início">
+                </div>
+                <div class="input">
+                    <label for="time">Horário de início de expediente</label>
+                    <input type="time" name="time" id="time" placeholder="Horário de início de expediente"
+                        value="09:00">
+                </div>
+            </fieldset>
 
-        <div class="input">
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </div>
-    </form>
+            <div class="input">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </main>
 </body>
 
 </html>
