@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #069e6e;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+section#login {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #00000080;
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+}
+
+div#image {
+    display: block;
+    background-color: #069e6e;
+    background-image: url(../images/background.jpg);
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+div#form {
+    display: block;
+    padding: 10px;
+}
+
+div#form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#form p {
+    font-size: 0.8em;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+div.field {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+div.field input {
+    height: 100%;
+    border: none;
+    padding: 5px;
+    width: calc(100% - 45px);
+    margin-left: -5px;
+    border: 1px solid lightgray;
+    border-radius: 0px 5px 5px 0px;
+}
+
+div.field span.material-symbols-outlined {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #3e7996;
+    color: white;
+}
+
+input[type="submit"] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 30px;
+    background-color: #3e7996;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #2d2e47;
+    transition: background-color .5s;
+}
+
+a.button {
+    display: block;
+    text-align: left;
+    font-size: 0.8m;
+    width: 100%;
+    height: 30px;
+    color: #3e7996;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+a.button:hover {
+    color: #2d2e47;
+    transition: color .5s;
+}
+
+span.material-symbols-outlined {
+    vertical-align: bottom;
+}
+
+a.button>span.material-symbols-outlined {
+    font-size: 1em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    section#login {
+        width: 90%;
+        height: 280px;
+    }
+
+    div#image {
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+
+    div#form {
+        float: right;
+        width: 70%;
+    }
+
+    div#form p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section#login {
+        width: 950px;
+        height: 280px;
+
+    }
+
+    div#image {
+        float: left;
+        width: 40%;
+        height: 100%;
+    }
+
+    div#form {
+        float: right;
+        width: 60%;
+    }
+
+    div#form p {
+        font-size: 1em;
+    }
+}
