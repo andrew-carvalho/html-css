@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../04-favicon/favicon.ico" type="image/x-icon">
+    <title>Conteúdo responsivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        main {
+            padding: 20px;
+            width: 80%;
+            line-height: 1.5em;
+        }
+
+        main>section,
+        main>section>article {
+            margin-bottom: 20px;
+        }
+
+        main p {
+            text-align: justify;
+        }
+
+        section.flex-content {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+        }
+
+        article.media-text {
+            display: flex;
+            flex-flow: row-reverse wrap-reverse;
+        }
+
+        article.text-media {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.text {
+            flex: 1 1 500px;
+        }
+
+        div.media {
+            flex: 1 0 500px;
+        }
+
+        div.media>iframe {
+            display: block;
+            margin: auto;
+            width: 90%;
+        }
+
+        div.image-placeholder {
+            width: 400px;
+            height: 400px;
+            display: block;
+            margin: auto;
+            background-color: gray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exemplo de conteúdo flexivel</h1>
+    </header>
+    <main>
+        <section class="flex-content">
+            <article class="media-text">
+                <div class="text">
+                    <h2>Elemento Media -> Text</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cumque corporis dolores
+                        consectetur nobis rerum nam praesentium sequi? Dolore explicabo nobis cumque exercitationem
+                        eveniet corrupti praesentium officia quaerat error tenetur? Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Earum est architecto iusto non dolor officiis reprehenderit
+                        cupiditate atque quae obcaecati veritatis adipisci, quo animi, repellat voluptate amet
+                        exercitationem ab. Incidunt.</p>
+                </div>
+                <div class="media">
+                    <div class="image-placeholder"></div>
+                </div>
+            </article>
+            <article class="text-media">
+                <div class="text">
+                    <h2>Elemento Text -> Media</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cumque corporis dolores
+                        consectetur nobis rerum nam praesentium sequi? Dolore explicabo nobis cumque exercitationem
+                        eveniet corrupti praesentium officia quaerat error tenetur? Lorem ipsum dolor, sit amet
+                        consectetur adipisicing elit. Earum est architecto iusto non dolor officiis reprehenderit
+                        cupiditate atque quae obcaecati veritatis adipisci, quo animi, repellat voluptate amet
+                        exercitationem ab. Incidunt.</p>
+                </div>
+                <div class="media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VBGMnFHRqcY?si=NEQ2rs2rdTK8Rr6P"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+        <section class="normal">
+            <h2>Conteúdo normal</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At amet debitis sequi mollitia ad saepe unde
+                laboriosam, accusamus fuga odio exercitationem deleniti tempore asperiores aperiam placeat similique
+                repellendus deserunt quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eaque
+                tempore, fuga cum pariatur voluptas eveniet ipsa quam quasi quae vitae sint, esse repudiandae sit nemo
+                consectetur sunt? Cumque, eum.</p>
+        </section>
+    </main>
+</body>
+
+</html>
