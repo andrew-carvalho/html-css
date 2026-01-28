@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="../04-favicon/favicon.ico" />
+        <title>Flexbox</title>
+        <style type="text/css">
+            div.container {
+                display: flex;
+                flex-flow: row wrap;
+                height: 200px;
+                align-items: center;
+                background-color: lightsalmon;
+            }
+
+            div.item {
+                background-color: lightskyblue;
+                border: 1px solid black;
+                padding: 20px;
+                text-align: center;
+                flex: auto;
+            }
+
+            #i1 {
+                order: 1;
+                align-self: flex-start;
+            }
+
+            #i2 {
+                order: 2;
+                align-self: flex-end;
+            }
+
+            #i3 {
+                order: 3;
+                align-self: center;
+            }
+
+            #i4 {
+                order: 4;
+                align-self: stretch;
+            }
+
+            #i5 {
+                order: 5;
+                align-self: auto;
+            }
+
+            #i6 {
+                order: 6;
+                align-self: auto;
+            }
+
+            #i7 {
+                order: 7;
+                align-self: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="item" id="i1">A</div>
+            <div class="item" id="i3">C</div>
+            <div class="item" id="i5">E</div>
+            <div class="item" id="i6">F</div>
+            <div class="item" id="i4">D</div>
+            <div class="item" id="i7">G</div>
+            <div class="item" id="i2">B</div>
+        </div>
+    </body>
+</html>

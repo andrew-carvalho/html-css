@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="../04-favicon/favicon.ico" />
+        <title>Flexbox</title>
+        <style type="text/css">
+            div.container {
+                display: flex;
+                flex-direction: column;
+                background-color: lightsalmon;
+            }
+
+            div.container-2 {
+                display: flex;
+                flex-direction: row;
+                background-color: lightsalmon;
+            }
+
+            div.item {
+                flex: auto;
+                text-align: center;
+                border: 1px solid black;
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </div>
+
+        <br />
+
+        <div class="container-2">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </div>
+    </body>
+</html>
